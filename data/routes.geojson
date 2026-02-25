@@ -1,0 +1,187 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 1",
+        "description": "Nouakchott (Start point - Capital city)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-15.9785, 18.0858],
+          [-15.9785, 18.0858]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 2",
+        "description": "Nouakchott to Azoueiga Dunes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-15.9785, 18.0858],
+          [-14.5000, 19.2000],
+          [-13.5000, 20.0000]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 3",
+        "description": "Azoueiga Dunes to Terjit Oasis, Mhaireth Oasis, and Ouadane"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-13.5000, 20.0000],
+          [-13.1000, 20.2500],
+          [-13.0041, 20.2772],
+          [-11.6173, 20.9332]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 4",
+        "description": "Ouadane to Eye of the Sahara, back to Ouadane, Tanouchert Oasis, and Chinguetti"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-11.6173, 20.9332],
+          [-11.4022, 21.1216],
+          [-11.6173, 20.9332],
+          [-11.8824, 20.7188],
+          [-12.3667, 20.4580]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 5",
+        "description": "Chinguetti to Fort Saganne, Agrour, Ben Amera, and Ben Aicha"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-12.3667, 20.4580],
+          [-12.8006, 20.5426],
+          [-12.7749, 20.5397],
+          [-13.6594, 21.2292],
+          [-13.7500, 21.2400]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 6",
+        "description": "Ben Aicha area to Choum Tunnel, Choum, and Train to Nouadhibou"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-13.7500, 21.2400],
+          [-13.0019, 21.3285],
+          [-13.0528, 21.1947],
+          [-17.0347, 20.9310]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Standard",
+        "day": "Day 7",
+        "description": "Nouadhibou back to Nouakchott"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-17.0347, 20.9310],
+          [-16.5000, 20.0000],
+          [-15.9785, 18.0858]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Short",
+        "day": "Day 1",
+        "description": "Nouakchott (Start point - Capital city)"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-15.9785, 18.0858],
+          [-15.9785, 18.0858]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Short",
+        "day": "Day 2",
+        "description": "Nouakchott to Terjit Oasis, Mhaireth Oasis, and Chinguetti"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-15.9785, 18.0858],
+          [-14.0000, 19.5000],
+          [-13.1000, 20.2500],
+          [-13.0041, 20.2772],
+          [-12.3667, 20.4580]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Short",
+        "day": "Day 3",
+        "description": "Chinguetti to Choum, Train to Nouadhibou"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-12.3667, 20.4580],
+          [-13.0528, 21.1947],
+          [-17.0347, 20.9310]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "tour": "Adrar Tour Short",
+        "day": "Day 4",
+        "description": "Nouadhibou back to Nouakchott"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-17.0347, 20.9310],
+          [-16.5000, 20.0000],
+          [-15.9785, 18.0858]
+        ]
+      }
+    }
+  ]
+}
