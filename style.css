@@ -49,6 +49,26 @@ html, body {
     padding-top: 8px;
 }
 
+/* Route line shadow effect */
+.route-line-shadow {
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* Location tooltip styling */
+.location-tooltip {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.location-tooltip::before {
+    border-top-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Hide default Leaflet attribution link styling for cleaner look */
 .leaflet-control-attribution {
     font-size: 10px;

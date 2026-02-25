@@ -1,20 +1,7 @@
-// Color palettes for the two tours
-const colorPalettes = {
-    "Adrar Tour Standard": {
-        "Day 1": "#e74c3c",   // Red
-        "Day 2": "#e67e22",   // Orange
-        "Day 3": "#f1c40f",   // Yellow
-        "Day 4": "#2ecc71",   // Green
-        "Day 5": "#3498db",   // Blue
-        "Day 6": "#9b59b6",   // Purple
-        "Day 7": "#c0392b"    // Dark Red
-    },
-    "Adrar Tour Short": {
-        "Day 1": "#1abc9c",   // Teal
-        "Day 2": "#16a085",   // Dark Teal
-        "Day 3": "#00bcd4",   // Cyan
-        "Day 4": "#0097a7"    // Dark Cyan
-    }
+// Color scheme - one color per tour
+const tourColors = {
+    "Adrar Tour Standard": "#e74c3c",   // Red
+    "Adrar Tour Short": "#1abc9c"       // Teal
 };
 
 // Initialize the map
@@ -28,16 +15,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// Style function for GeoJSON features
-function getStyle(feature) {
+// Style function for GeoJSON route features
+function getRouteStyle(feature) {
     const tour = feature.properties.tour;
-    const day = feature.properties.day;
-    const color = colorPalettes[tour] ? colorPalettes[tour][day] : '#333333';
+    const color = tourColors[tour] || '#333333';
 
     return {
         color: color,
         weight: 4,
-        opacity: 0.8
+        opacity: 0.9,
+        // Add shadow effect using CSS filter (Leaflet will apply this via SVG)
+        className: 'route-line-shadow'
     };
 }
 
@@ -67,10 +55,45 @@ fetch('data/routes.geojson')
         return response.json();
     })
     .then(data => {
-        // Create GeoJSON layer
+        // Create GeoJSON layer for routes
         const routesLayer = L.geoJSON(data, {
-            style: getStyle,
-            onEachFeature: onEachFeature
+            style: getRouteStyle,
+            onEachFeature: onEachFeature,
+            filter: function(feature) {
+                // Only show LineString features (routes)
+                return feature.geometry.type === 'LineString';
+            }
+        }).addTo(map);
+
+        // Create location markers (Point features)
+        const locationsLayer = L.geoJSON(data, {
+            filter: function(feature) {
+                // Only show Point features (locations)
+                return feature.geometry.type === 'Point';
+            },
+            pointToLayer: function(feature, latlng) {
+                const tour = feature.properties.tour;
+                const color = tourColors[tour] || '#333333';
+
+                return L.circleMarker(latlng, {
+                    radius: 6,
+                    fillColor: color,
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                });
+            },
+            onEachFeature: function(feature, layer) {
+                if (feature.properties && feature.properties.location) {
+                    // Show location name on hover with tooltip
+                    layer.bindTooltip(feature.properties.location, {
+                        permanent: false,
+                        direction: 'top',
+                        className: 'location-tooltip'
+                    });
+                }
+            }
         }).addTo(map);
 
         // Fit map bounds to all routes
