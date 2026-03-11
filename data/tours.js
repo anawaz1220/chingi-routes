@@ -504,8 +504,20 @@ const TOUR_GROUPS = [
       }
 
     ] // end tours
+  },
+  // ── Coming Soon ──────────────────────────────────────────────────────────
+  {
+    id: "senegal",
+    name: "Senegal",
+    flag: "🇸🇳",
+    comingSoon: true,
+    tours: []
+  },
+  {
+    id: "gambia",
+    name: "Gambia",
+    flag: "🇬🇲",
+    comingSoon: true,
+    tours: []
   }
-  // Future groups can be added here:
-  // { id: "senegal", name: "Senegal", flag: "🇸🇳", tours: [...] },
-  // { id: "gambia",  name: "Gambia",  flag: "🇬🇲", tours: [...] },
 ];
