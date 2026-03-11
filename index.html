@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauritania Tours - Route Map</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chingi Tours – Interactive Route Map</title>
 
-    <!-- Leaflet CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-          crossorigin="">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="map"></div>
 
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-            crossorigin=""></script>
+  <div id="app">
 
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+    <!-- ── Sidebar ── -->
+    <aside id="sidebar">
+      <div id="sidebar-header">
+        <img src="assets/logo.png" alt="Chingi Tours" id="logo" onerror="this.style.display='none'">
+        <h1 id="brand-name">Chingi Tours</h1>
+      </div>
+
+      <div id="sidebar-content">
+        <div id="show-all-btn" class="show-all-row">
+          <button id="btn-show-all" class="btn-show-all active">Show All Tours</button>
+        </div>
+        <nav id="tour-list">
+          <!-- Populated by script.js -->
+        </nav>
+      </div>
+
+      <div id="sidebar-footer">
+        <span>Mauritania · Senegal · Gambia</span>
+      </div>
+    </aside>
+
+    <!-- ── Map ── -->
+    <main id="map-container">
+      <!-- Mobile sidebar toggle -->
+      <button id="mobile-toggle" title="Toggle tour list" aria-label="Toggle sidebar">
+        <span class="hamburger">☰</span>
+      </button>
+
+      <div id="map"></div>
+
+      <!-- Basemap Switcher -->
+      <div id="layer-switcher">
+        <button class="layer-toggle-btn" id="layer-toggle" title="Change basemap">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </button>
+        <div class="layer-options" id="layer-options">
+          <button class="layer-opt active" data-layer="light">Light</button>
+          <button class="layer-opt" data-layer="dark">Dark</button>
+          <button class="layer-opt" data-layer="satellite">Satellite</button>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+
+  <!-- Tour Data -->
+  <script src="data/tours.js"></script>
+
+  <!-- App Logic -->
+  <script src="script.js"></script>
+
 </body>
 </html>
