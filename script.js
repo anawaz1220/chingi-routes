@@ -40,7 +40,13 @@ function collectUniqueStops(tour) {
       const key = stop.coords.join(',');
       if (!seen.has(key)) {
         seen.add(key);
-        stops.push({ name: stop.name, coords: stop.coords, seq: stops.length + 1 });
+        stops.push({
+          name: stop.name,
+          coords: stop.coords,
+          seq: stops.length + 1,
+          day: day.day,         // day number (1, 2, 3…)
+          dayTitle: day.title   // e.g. "Day 2 – Desert & Oasis"
+        });
       }
     });
   });
@@ -48,6 +54,7 @@ function collectUniqueStops(tour) {
 }
 
 // ── Helper: build route segments (day segments with prevCoord carry-over) ─
+// Uses pre-computed routeCoords (from ORS) when available, else straight line.
 
 function buildSegments(tour) {
   const segments = [];
@@ -55,8 +62,17 @@ function buildSegments(tour) {
   tour.days.forEach(day => {
     const sc = day.stops.map(s => s.coords);
     if (!sc.length) return;
-    const seg = prevCoord ? [prevCoord, ...sc] : sc;
-    if (seg.length >= 2) segments.push({ coords: seg, day });
+
+    let coords;
+    if (day.routeCoords && day.routeCoords.length >= 2) {
+      // Use pre-computed road-following coordinates
+      coords = day.routeCoords;
+    } else {
+      // Straight-line fallback
+      coords = prevCoord ? [prevCoord, ...sc] : sc;
+    }
+
+    if (coords.length >= 2) segments.push({ coords, day, fallback: !day.routeCoords });
     prevCoord = sc[sc.length - 1];
   });
   return segments;
@@ -215,6 +231,14 @@ function buildHighlightedLayer(tour) {
     const isFirst = i === 0;
     const isLast  = i === total - 1;
 
+    const tooltipText = `${stop.name} · Day ${stop.day}`;
+    const popupHtml = `
+      <div class="popup-inner">
+        <span class="popup-tour-badge" style="background:${tour.color}">${tour.name}</span>
+        <div class="popup-day-title">${stop.dayTitle}</div>
+        <div class="popup-description">${stop.name}</div>
+      </div>`;
+
     if (isFirst) {
       marker = L.marker(stop.coords, {
         icon: createPinIcon('#27ae60', 'S'),
@@ -231,10 +255,13 @@ function buildHighlightedLayer(tour) {
       });
     }
 
-    marker.bindTooltip(stop.name, {
-      permanent: false, direction: 'top',
-      className: 'location-tooltip', offset: [0, -4]
-    }).addTo(lg);
+    marker
+      .bindTooltip(tooltipText, {
+        permanent: false, direction: 'top',
+        className: 'location-tooltip', offset: [0, -4]
+      })
+      .bindPopup(popupHtml, { maxWidth: 260 })
+      .addTo(lg);
   });
 
   const bounds = allC.length ? L.latLngBounds(allC).pad(0.08) : null;
