@@ -1,0 +1,788 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "tourId": "adrar-tagant-aoukar",
+    "tourName": "Adrar Tagant Aoukar Tour",
+    "duration": "15 Days",
+    "color": "#e67e22"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouakchott",
+        "seq": 1,
+        "day": 1,
+        "dayTitle": "Day 1 – Nouakchott"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.9785,
+          18.0858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Banc d'Arguin National Park",
+        "seq": 2,
+        "day": 2,
+        "dayTitle": "Day 2 – Banc d'Arguin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.3019,
+          20.4998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Diawling National Park",
+        "seq": 3,
+        "day": 3,
+        "dayTitle": "Day 3 – Diawling National Park"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -16.25,
+          16.35
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Bogue",
+        "seq": 4,
+        "day": 4,
+        "dayTitle": "Day 4 – Bogue"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.2723,
+          16.5872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Aleg",
+        "seq": 5,
+        "day": 5,
+        "dayTitle": "Day 5 – Tagant Region"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.9218,
+          17.0578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Kamour",
+        "seq": 6,
+        "day": 5,
+        "dayTitle": "Day 5 – Tagant Region"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13,
+          17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Kiffa",
+        "seq": 7,
+        "day": 5,
+        "dayTitle": "Day 5 – Tagant Region"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.4046,
+          16.6227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Guelta Metraucha",
+        "seq": 8,
+        "day": 5,
+        "dayTitle": "Day 5 – Tagant Region"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.8,
+          17.5
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ayoun el Atrous",
+        "seq": 9,
+        "day": 6,
+        "dayTitle": "Day 6 – Néma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.45,
+          16.65
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Néma",
+        "seq": 10,
+        "day": 6,
+        "dayTitle": "Day 6 – Néma"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.259,
+          16.6208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Oualata",
+        "seq": 11,
+        "day": 7,
+        "dayTitle": "Day 7 – Oualata"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.0197,
+          17.2994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Elephant Rock / Finger Rock (Es Sba)",
+        "seq": 12,
+        "day": 8,
+        "dayTitle": "Day 8 – Rock Formations"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.2,
+          17
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Akreijit",
+        "seq": 13,
+        "day": 9,
+        "dayTitle": "Day 9 – Tichitt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.8,
+          18.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tichitt",
+        "seq": 14,
+        "day": 9,
+        "dayTitle": "Day 9 – Tichitt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.5167,
+          18.4531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tidjikja",
+        "seq": 15,
+        "day": 10,
+        "dayTitle": "Day 10 – Tidjikja"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.4235,
+          18.5545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Wadi Timinit",
+        "seq": 16,
+        "day": 11,
+        "dayTitle": "Day 11 – Adrar Oases"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12,
+          19.5
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Terjit Oasis",
+        "seq": 17,
+        "day": 11,
+        "dayTitle": "Day 11 – Adrar Oases"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.1,
+          20.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Mhaireth Oasis",
+        "seq": 18,
+        "day": 11,
+        "dayTitle": "Day 11 – Adrar Oases"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0041,
+          20.2772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ouadane",
+        "seq": 19,
+        "day": 12,
+        "dayTitle": "Day 12 – Eye of the Sahara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.6173,
+          20.9332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Eye of the Sahara",
+        "seq": 20,
+        "day": 12,
+        "dayTitle": "Day 12 – Eye of the Sahara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.4022,
+          21.1216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tanouchert Oasis",
+        "seq": 21,
+        "day": 13,
+        "dayTitle": "Day 13 – Chinguetti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.8824,
+          20.7188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Chinguetti",
+        "seq": 22,
+        "day": 13,
+        "dayTitle": "Day 13 – Chinguetti"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.3667,
+          20.458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Choum Tunnel",
+        "seq": 23,
+        "day": 14,
+        "dayTitle": "Day 14 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0019,
+          21.3285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Choum",
+        "seq": 24,
+        "day": 14,
+        "dayTitle": "Day 14 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0528,
+          21.1947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouadhibou",
+        "seq": 25,
+        "day": 14,
+        "dayTitle": "Day 14 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.0347,
+          20.931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 2,
+        "dayTitle": "Day 2 – Banc d'Arguin",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.9785,
+            18.0858
+          ],
+          [
+            -16.3019,
+            20.4998
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 3,
+        "dayTitle": "Day 3 – Diawling National Park",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -16.3019,
+            20.4998
+          ],
+          [
+            -16.25,
+            16.35
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 4,
+        "dayTitle": "Day 4 – Bogue",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -16.25,
+            16.35
+          ],
+          [
+            -14.2723,
+            16.5872
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 5,
+        "dayTitle": "Day 5 – Tagant Region",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -14.2723,
+            16.5872
+          ],
+          [
+            -13.9218,
+            17.0578
+          ],
+          [
+            -13,
+            17
+          ],
+          [
+            -11.4046,
+            16.6227
+          ],
+          [
+            -11.8,
+            17.5
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 6,
+        "dayTitle": "Day 6 – Néma",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -11.8,
+            17.5
+          ],
+          [
+            -11.45,
+            16.65
+          ],
+          [
+            -7.259,
+            16.6208
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 7,
+        "dayTitle": "Day 7 – Oualata",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -7.259,
+            16.6208
+          ],
+          [
+            -7.0197,
+            17.2994
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 8,
+        "dayTitle": "Day 8 – Rock Formations",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -7.0197,
+            17.2994
+          ],
+          [
+            -7.2,
+            17
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 9,
+        "dayTitle": "Day 9 – Tichitt",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -7.2,
+            17
+          ],
+          [
+            -9.8,
+            18.3
+          ],
+          [
+            -9.5167,
+            18.4531
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 10,
+        "dayTitle": "Day 10 – Tidjikja",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.5167,
+            18.4531
+          ],
+          [
+            -11.4235,
+            18.5545
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 11,
+        "dayTitle": "Day 11 – Adrar Oases",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -11.4235,
+            18.5545
+          ],
+          [
+            -12,
+            19.5
+          ],
+          [
+            -13.1,
+            20.25
+          ],
+          [
+            -13.0041,
+            20.2772
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 12,
+        "dayTitle": "Day 12 – Eye of the Sahara",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.0041,
+            20.2772
+          ],
+          [
+            -11.6173,
+            20.9332
+          ],
+          [
+            -11.4022,
+            21.1216
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 13,
+        "dayTitle": "Day 13 – Chinguetti",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -11.4022,
+            21.1216
+          ],
+          [
+            -11.8824,
+            20.7188
+          ],
+          [
+            -12.3667,
+            20.458
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 14,
+        "dayTitle": "Day 14 – Iron Ore Train",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.3667,
+            20.458
+          ],
+          [
+            -13.0019,
+            21.3285
+          ],
+          [
+            -13.0528,
+            21.1947
+          ],
+          [
+            -17.0347,
+            20.931
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 15,
+        "dayTitle": "Day 15 – Airport Transfer",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.0347,
+            20.931
+          ],
+          [
+            -15.9785,
+            18.0858
+          ]
+        ]
+      }
+    }
+  ]
+}

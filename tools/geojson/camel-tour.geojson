@@ -1,0 +1,594 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "tourId": "camel-tour",
+    "tourName": "Camel Tour Adrar",
+    "duration": "10 Days",
+    "color": "#8e44ad"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouakchott",
+        "seq": 1,
+        "day": 1,
+        "dayTitle": "Day 1 – Departure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.9785,
+          18.0858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Akjoujt",
+        "seq": 2,
+        "day": 1,
+        "dayTitle": "Day 1 – Departure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -14.38,
+          19.745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Azoueiga Dunes",
+        "seq": 3,
+        "day": 1,
+        "dayTitle": "Day 1 – Departure"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.5,
+          20
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tifoujar Pass",
+        "seq": 4,
+        "day": 2,
+        "dayTitle": "Day 2 – Tifoujar & Singing Dune"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.6,
+          20.3
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Singing Dune",
+        "seq": 5,
+        "day": 2,
+        "dayTitle": "Day 2 – Tifoujar & Singing Dune"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.4,
+          20.2
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Toungad",
+        "seq": 6,
+        "day": 3,
+        "dayTitle": "Day 3 – Toungad & Zweigiya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.2,
+          20.7
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Zweigiya",
+        "seq": 7,
+        "day": 3,
+        "dayTitle": "Day 3 – Toungad & Zweigiya"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13,
+          20.9
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Terjit Oasis",
+        "seq": 8,
+        "day": 4,
+        "dayTitle": "Day 4 – Terjit Oasis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.1,
+          20.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Pass Tourvine",
+        "seq": 9,
+        "day": 4,
+        "dayTitle": "Day 4 – Terjit Oasis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.15,
+          20.35
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ichiv",
+        "seq": 10,
+        "day": 5,
+        "dayTitle": "Day 5 – Ichiv"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.8,
+          20.6
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Mhaireth Oasis",
+        "seq": 11,
+        "day": 7,
+        "dayTitle": "Day 7 – Mhaireth & Zarga Desert"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0041,
+          20.2772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Zarga Desert",
+        "seq": 12,
+        "day": 7,
+        "dayTitle": "Day 7 – Mhaireth & Zarga Desert"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.6,
+          20.4
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Chinguetti",
+        "seq": 13,
+        "day": 8,
+        "dayTitle": "Day 8 – Chinguetti & Tanouchert"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.3667,
+          20.458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tanouchert Oasis",
+        "seq": 14,
+        "day": 8,
+        "dayTitle": "Day 8 – Chinguetti & Tanouchert"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.8824,
+          20.7188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ouadane",
+        "seq": 15,
+        "day": 9,
+        "dayTitle": "Day 9 – Ouadane, Eye of the Sahara & Atar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.6173,
+          20.9332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Eye of the Sahara",
+        "seq": 16,
+        "day": 9,
+        "dayTitle": "Day 9 – Ouadane, Eye of the Sahara & Atar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.4022,
+          21.1216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Fort Saganne",
+        "seq": 17,
+        "day": 9,
+        "dayTitle": "Day 9 – Ouadane, Eye of the Sahara & Atar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.8006,
+          20.5426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Atar",
+        "seq": 18,
+        "day": 9,
+        "dayTitle": "Day 9 – Ouadane, Eye of the Sahara & Atar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0474,
+          20.5175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Seguellil",
+        "seq": 19,
+        "day": 10,
+        "dayTitle": "Day 10 – Return to Nouakchott"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.3,
+          20.5
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 1,
+        "dayTitle": "Day 1 – Departure",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.9785,
+            18.0858
+          ],
+          [
+            -14.38,
+            19.745
+          ],
+          [
+            -13.5,
+            20
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 2,
+        "dayTitle": "Day 2 – Tifoujar & Singing Dune",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.5,
+            20
+          ],
+          [
+            -13.6,
+            20.3
+          ],
+          [
+            -13.4,
+            20.2
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 3,
+        "dayTitle": "Day 3 – Toungad & Zweigiya",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.4,
+            20.2
+          ],
+          [
+            -13.2,
+            20.7
+          ],
+          [
+            -13,
+            20.9
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 4,
+        "dayTitle": "Day 4 – Terjit Oasis",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13,
+            20.9
+          ],
+          [
+            -13.1,
+            20.25
+          ],
+          [
+            -13.15,
+            20.35
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 5,
+        "dayTitle": "Day 5 – Ichiv",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.15,
+            20.35
+          ],
+          [
+            -12.8,
+            20.6
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 6,
+        "dayTitle": "Day 6 – Ichiv Rest Day",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.8,
+            20.6
+          ],
+          [
+            -12.8,
+            20.6
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 7,
+        "dayTitle": "Day 7 – Mhaireth & Zarga Desert",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.8,
+            20.6
+          ],
+          [
+            -13.0041,
+            20.2772
+          ],
+          [
+            -12.6,
+            20.4
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 8,
+        "dayTitle": "Day 8 – Chinguetti & Tanouchert",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.6,
+            20.4
+          ],
+          [
+            -12.3667,
+            20.458
+          ],
+          [
+            -11.8824,
+            20.7188
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 9,
+        "dayTitle": "Day 9 – Ouadane, Eye of the Sahara & Atar",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -11.8824,
+            20.7188
+          ],
+          [
+            -11.6173,
+            20.9332
+          ],
+          [
+            -11.4022,
+            21.1216
+          ],
+          [
+            -12.8006,
+            20.5426
+          ],
+          [
+            -13.0474,
+            20.5175
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 10,
+        "dayTitle": "Day 10 – Return to Nouakchott",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.0474,
+            20.5175
+          ],
+          [
+            -13.3,
+            20.5
+          ],
+          [
+            -15.9785,
+            18.0858
+          ]
+        ]
+      }
+    }
+  ]
+}

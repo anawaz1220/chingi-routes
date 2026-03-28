@@ -1,0 +1,438 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "tourId": "adrar-standard",
+    "tourName": "Adrar Tour Standard",
+    "duration": "7 Days",
+    "color": "#e74c3c"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouakchott",
+        "seq": 1,
+        "day": 1,
+        "dayTitle": "Day 1 – Nouakchott"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.9785,
+          18.0858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Azoueiga Dunes",
+        "seq": 2,
+        "day": 2,
+        "dayTitle": "Day 2 – Azoueiga Dunes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.5,
+          20
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Terjit Oasis",
+        "seq": 3,
+        "day": 3,
+        "dayTitle": "Day 3 – Oases & Ouadane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.1,
+          20.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Mhaireth Oasis",
+        "seq": 4,
+        "day": 3,
+        "dayTitle": "Day 3 – Oases & Ouadane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0041,
+          20.2772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ouadane",
+        "seq": 5,
+        "day": 3,
+        "dayTitle": "Day 3 – Oases & Ouadane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.6173,
+          20.9332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Eye of the Sahara",
+        "seq": 6,
+        "day": 4,
+        "dayTitle": "Day 4 – Eye of the Sahara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.4022,
+          21.1216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Tanouchert Oasis",
+        "seq": 7,
+        "day": 4,
+        "dayTitle": "Day 4 – Eye of the Sahara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -11.8824,
+          20.7188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Chinguetti",
+        "seq": 8,
+        "day": 4,
+        "dayTitle": "Day 4 – Eye of the Sahara"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.3667,
+          20.458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Fort Saganne",
+        "seq": 9,
+        "day": 5,
+        "dayTitle": "Day 5 – Ben Amera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.8006,
+          20.5426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Agrour",
+        "seq": 10,
+        "day": 5,
+        "dayTitle": "Day 5 – Ben Amera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.7749,
+          20.5397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ben Amera",
+        "seq": 11,
+        "day": 5,
+        "dayTitle": "Day 5 – Ben Amera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.6594,
+          21.2292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Ben Aicha",
+        "seq": 12,
+        "day": 5,
+        "dayTitle": "Day 5 – Ben Amera"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.75,
+          21.24
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Choum Tunnel",
+        "seq": 13,
+        "day": 6,
+        "dayTitle": "Day 6 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0019,
+          21.3285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Choum",
+        "seq": 14,
+        "day": 6,
+        "dayTitle": "Day 6 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0528,
+          21.1947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouadhibou",
+        "seq": 15,
+        "day": 6,
+        "dayTitle": "Day 6 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.0347,
+          20.931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 2,
+        "dayTitle": "Day 2 – Azoueiga Dunes",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.9785,
+            18.0858
+          ],
+          [
+            -13.5,
+            20
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 3,
+        "dayTitle": "Day 3 – Oases & Ouadane",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.5,
+            20
+          ],
+          [
+            -13.1,
+            20.25
+          ],
+          [
+            -13.0041,
+            20.2772
+          ],
+          [
+            -11.6173,
+            20.9332
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 4,
+        "dayTitle": "Day 4 – Eye of the Sahara",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -11.6173,
+            20.9332
+          ],
+          [
+            -11.4022,
+            21.1216
+          ],
+          [
+            -11.6173,
+            20.9332
+          ],
+          [
+            -11.8824,
+            20.7188
+          ],
+          [
+            -12.3667,
+            20.458
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 5,
+        "dayTitle": "Day 5 – Ben Amera",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.3667,
+            20.458
+          ],
+          [
+            -12.8006,
+            20.5426
+          ],
+          [
+            -12.7749,
+            20.5397
+          ],
+          [
+            -13.6594,
+            21.2292
+          ],
+          [
+            -13.75,
+            21.24
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 6,
+        "dayTitle": "Day 6 – Iron Ore Train",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -13.75,
+            21.24
+          ],
+          [
+            -13.0019,
+            21.3285
+          ],
+          [
+            -13.0528,
+            21.1947
+          ],
+          [
+            -17.0347,
+            20.931
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 7,
+        "dayTitle": "Day 7 – Return",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.0347,
+            20.931
+          ],
+          [
+            -15.9785,
+            18.0858
+          ]
+        ]
+      }
+    }
+  ]
+}

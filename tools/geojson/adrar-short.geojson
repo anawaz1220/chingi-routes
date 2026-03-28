@@ -1,0 +1,191 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "tourId": "adrar-short",
+    "tourName": "Adrar Tour Short",
+    "duration": "4 Days",
+    "color": "#27ae60"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouakchott",
+        "seq": 1,
+        "day": 1,
+        "dayTitle": "Day 1 – Nouakchott"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.9785,
+          18.0858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Terjit Oasis",
+        "seq": 2,
+        "day": 2,
+        "dayTitle": "Day 2 – Desert & Oasis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.1,
+          20.25
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Mhaireth Oasis",
+        "seq": 3,
+        "day": 2,
+        "dayTitle": "Day 2 – Desert & Oasis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0041,
+          20.2772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Chinguetti",
+        "seq": 4,
+        "day": 2,
+        "dayTitle": "Day 2 – Desert & Oasis"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -12.3667,
+          20.458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Choum",
+        "seq": 5,
+        "day": 3,
+        "dayTitle": "Day 3 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -13.0528,
+          21.1947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "stop",
+        "name": "Nouadhibou",
+        "seq": 6,
+        "day": 3,
+        "dayTitle": "Day 3 – Iron Ore Train"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.0347,
+          20.931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 2,
+        "dayTitle": "Day 2 – Desert & Oasis",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -15.9785,
+            18.0858
+          ],
+          [
+            -13.1,
+            20.25
+          ],
+          [
+            -13.0041,
+            20.2772
+          ],
+          [
+            -12.3667,
+            20.458
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 3,
+        "dayTitle": "Day 3 – Iron Ore Train",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -12.3667,
+            20.458
+          ],
+          [
+            -13.0528,
+            21.1947
+          ],
+          [
+            -17.0347,
+            20.931
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "route",
+        "day": 4,
+        "dayTitle": "Day 4 – Return",
+        "note": "EDIT THIS: trace the actual road/track path"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -17.0347,
+            20.931
+          ],
+          [
+            -15.9785,
+            18.0858
+          ]
+        ]
+      }
+    }
+  ]
+}
