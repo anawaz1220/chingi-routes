@@ -127,11 +127,13 @@ async function main() {
     process.exit(1);
   }
 
-  // Load tours data (eval the JS file — it sets TOUR_GROUPS)
+  // Load tours data
   const toursPath = path.join(__dirname, '..', 'data', 'tours.js');
   const toursCode = fs.readFileSync(toursPath, 'utf8');
+  // Replace const/let with var so eval leaks into this scope
+  const patchedCode = toursCode.replace(/^\s*(const|let)\s+/gm, 'var ');
   // eslint-disable-next-line no-eval
-  eval(toursCode);  // defines TOUR_GROUPS in this scope
+  eval(patchedCode);  // defines TOUR_GROUPS in this scope
 
   const result = [];
   let totalSegments = 0;
