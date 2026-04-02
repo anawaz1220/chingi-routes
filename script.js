@@ -59,6 +59,26 @@ function collectUniqueStops(tour) {
 function buildSegments(tour) {
   const segments = [];
   let prevCoord = null;
+
+  // Pre-pass: mark unrouted days whose straight-line would overlap the next day's route.
+  // This happens when the client re-traced a route starting from an earlier day's first stop.
+  const skipStraight = new Set();
+  for (let i = 0; i < tour.days.length - 1; i++) {
+    const day     = tour.days[i];
+    const nextDay = tour.days[i + 1];
+    const sc      = day.stops.map(s => s.coords);
+    if (!sc.length) continue;
+    const hasRoute = typeof ROUTE_COORDS !== 'undefined' &&
+      ROUTE_COORDS[tour.id] && ROUTE_COORDS[tour.id][day.day];
+    if (hasRoute) continue; // only skip unrouted days
+    const nextRc = typeof ROUTE_COORDS !== 'undefined' &&
+      ROUTE_COORDS[tour.id] && ROUTE_COORDS[tour.id][nextDay.day];
+    if (!nextRc || nextRc.length < 2) continue;
+    // If next route starts near this day's first stop, the next route covers this day's path
+    const dist = Math.abs(sc[0][0] - nextRc[0][0]) + Math.abs(sc[0][1] - nextRc[0][1]);
+    if (dist < 0.15) skipStraight.add(day.day);
+  }
+
   tour.days.forEach(day => {
     const sc = day.stops.map(s => s.coords);
     if (!sc.length) return;
@@ -67,12 +87,16 @@ function buildSegments(tour) {
     const rc = (typeof ROUTE_COORDS !== 'undefined') && ROUTE_COORDS[tour.id] && ROUTE_COORDS[tour.id][day.day];
     if (rc && rc.length >= 2) {
       coords = rc;
+    } else if (skipStraight.has(day.day)) {
+      // Next day's route already covers this day's path — skip drawing, just update prevCoord
+      prevCoord = sc[sc.length - 1];
+      return;
     } else {
       // Straight-line fallback
       coords = prevCoord ? [prevCoord, ...sc] : sc;
     }
 
-    if (coords.length >= 2) segments.push({ coords, day, fallback: !day.routeCoords });
+    if (coords.length >= 2) segments.push({ coords, day });
     prevCoord = sc[sc.length - 1];
   });
   return segments;
