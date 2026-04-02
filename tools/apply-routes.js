@@ -51,11 +51,14 @@ for (const [tourId, days] of Object.entries(lookup)) {
 
     // Find existing tag and replace, or inject after stops block
     if (src.includes(tag)) {
-      // Replace existing routeCoords line
+      // Replace tag line AND the routeCoords line that follows it
+      const escapedTag = tag.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      const updateRe = new RegExp(`${escapedTag}\\n[^\\n]*routeCoords:[^\\n]*`);
       src = src.replace(
-        new RegExp(`${tag.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}[^\\n]*`),
+        updateRe,
         `${tag}\n            routeCoords: ${coordsJson}, routeFallback: ${fallbackStr},`
       );
+      patchCount++;
     } else {
       // Inject after the last stop in this day's stops array
       // We look for the day block by day number + tour id pattern

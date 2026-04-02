@@ -12,7 +12,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const CLIENT_DIR  = path.join(__dirname, '..', 'data', 'chingitours client udpated trips');
+const CLIENT_DIR  = 'D:\\Personel\\Freelance\\Fiverr\\Chingi Tours\\Trips Update\\Old filxed + new region routes';
 const TOURS_PATH  = path.join(__dirname, '..', 'data', 'tours.js');
 const OUT_FILE    = path.join(__dirname, 'tours-routed.json');
 
@@ -23,7 +23,7 @@ eval(patchedCode); // defines TOUR_GROUPS
 
 // ── Map tour id → geojson filename ───────────────────────────────────────
 const TOUR_FILES = {
-  'adrar-short':         'adrar-short.geojson',
+  'adrar-short':         'Adrar short.geojson',
   'adrar-standard':      'adrar-standard.geojson',
   'adrar-extended':      'adrar-extended.geojson',
   'adrar-tagant-aoukar': 'adrar-tagant-aoukar.geojson',
