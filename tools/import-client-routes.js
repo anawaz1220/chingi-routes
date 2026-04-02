@@ -56,18 +56,38 @@ for (const group of TOUR_GROUPS) {
     const geojson = JSON.parse(fs.readFileSync(geojsonPath, 'utf8'));
 
     // Index client LineStrings by day number
+    // Handles: "6 & 7" → assigns to all mentioned days
+    // Handles: day numbers beyond tour's max day → concatenates onto last valid day
+    const maxTourDay = Math.max(...tour.days.map(d => d.day));
     const clientRoutes = {};
     for (const feature of geojson.features) {
       if (!feature.geometry || feature.geometry.type !== 'LineString') continue;
-      const day = parseInt(feature.properties.day, 10);
-      if (isNaN(day)) continue;
+      const dayRaw = String(feature.properties.day || '');
 
       // GeoJSON coords are [lng, lat] — convert to [lat, lng] for our app
       const coords = feature.geometry.coordinates.map(([lng, lat]) => [
         Math.round(lat * 1e6) / 1e6,
         Math.round(lng * 1e6) / 1e6,
       ]);
-      clientRoutes[day] = coords;
+
+      // Extract all day numbers mentioned (handles "6 & 7", "6", "7" etc.)
+      const dayNums = [...dayRaw.matchAll(/\d+/g)].map(m => parseInt(m[0], 10));
+      if (!dayNums.length) continue;
+
+      for (const day of dayNums) {
+        if (day <= maxTourDay) {
+          // Assign or append to this day
+          clientRoutes[day] = clientRoutes[day]
+            ? [...clientRoutes[day], ...coords]
+            : coords;
+        } else {
+          // Day exceeds tour length — concatenate onto last valid day
+          console.log(`  Day ${day}: beyond tour max (${maxTourDay}), appending to day ${maxTourDay}`);
+          clientRoutes[maxTourDay] = clientRoutes[maxTourDay]
+            ? [...clientRoutes[maxTourDay], ...coords]
+            : coords;
+        }
+      }
     }
 
     console.log(`\n▶ ${tour.name}`);
