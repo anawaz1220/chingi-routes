@@ -412,59 +412,65 @@ const TOUR_GROUPS = [
           {
             day: 1,
             title: "Day 1 – Departure",
-            description: "Nouakchott, drive through Akjoujt to the Azoueiga sand dunes.",
+            description: "Depart from Nouakchott.",
             stops: [
-              { name: "Nouakchott", coords: [18.0858, -15.9785] },
-              { name: "Akjoujt", coords: [19.7450, -14.3800] },
-              { name: "Azoueiga Dunes", coords: [20.0000, -13.5000] }
+              { name: "Nouakchott", coords: [18.088513, -15.960831] }
             ]
           },
           {
             day: 2,
-            title: "Day 2 – Tifoujar & Singing Dune",
-            description: "Trek through Tifoujar Pass and camp near the resonant Singing Dune.",
+            title: "Day 2 – Drive to Azoueiga",
+            description: "Drive through Akjoujt to the Azoueiga sand dunes.",
             stops: [
-              { name: "Tifoujar Pass", coords: [20.30, -13.60] },
-              { name: "Singing Dune", coords: [20.20, -13.40] }
+              { name: "Akjoujt", coords: [19.744944, -14.379532] },
+              { name: "Azoueiga Dunes", coords: [19.867443, -13.539698] }
             ]
           },
           {
             day: 3,
-            title: "Day 3 – Toungad & Zweigiya",
-            description: "Camel trek through the remote landscapes of Toungad and Zweigiya.",
+            title: "Day 3 – Tivoujar & Singing Dune",
+            description: "Trek through Tivoujar Pass and camp near the resonant Singing Dune.",
             stops: [
-              { name: "Toungad", coords: [20.70, -13.20] },
-              { name: "Zweigiya", coords: [20.90, -13.00] }
+              { name: "Tivoujar Pass", coords: [20.098206, -13.20124] },
+              { name: "Singing Dune", coords: [20.1521, -13.224641] }
             ]
           },
           {
             day: 4,
-            title: "Day 4 – Terjit Oasis",
-            description: "Visit the lush Terjit Oasis, then cross Pass Tourvine by camel.",
+            title: "Day 4 – Zweigiya",
+            description: "Camel trek through the remote landscapes of Zweigiya.",
             stops: [
-              { name: "Terjit Oasis", coords: [20.2500, -13.1000] },
-              { name: "Pass Tourvine", coords: [20.35, -13.15] }
+              { name: "Zweigiya", coords: [20.268966, -13.134207] }
             ]
           },
           {
             day: 5,
-            title: "Day 5 – Ichiv",
-            description: "Camel trek to Ichiv camp.",
+            title: "Day 5 – Terjit Oasis",
+            description: "Visit the lush Terjit Oasis, then cross Pass Tourvine by camel.",
             stops: [
-              { name: "Ichiv", coords: [20.60, -12.80] }
+              { name: "Terjit Oasis", coords: [20.253067, -13.08793] },
+              { name: "Pass Tourvine", coords: [20.259317, -13.104356] }
             ]
           },
           {
             day: 6,
-            title: "Day 6 – Ichiv Rest Day",
-            description: "Rest day at Ichiv camp, enjoying the desert silence.",
+            title: "Day 6 – Ichiv",
+            description: "Camel trek to Ichiv camp.",
             stops: [
-              { name: "Ichiv", coords: [20.60, -12.80] }
+              { name: "Ichiv", coords: [20.243755, -13.050993] }
             ]
           },
           {
             day: 7,
-            title: "Day 7 – Mhaireth & Zarga Desert",
+            title: "Day 7 – Ichiv Rest Day",
+            description: "Rest day at Ichiv camp, enjoying the desert silence.",
+            stops: [
+              { name: "Ichiv", coords: [20.243755, -13.050993] }
+            ]
+          },
+          {
+            day: 8,
+            title: "Day 8 – Mhaireth & Zarga Desert",
             description: "Trek to Mhaireth Oasis and explore the Zarga Desert.",
             stops: [
               { name: "Mhaireth Oasis", coords: [20.2772, -13.0041] },
@@ -472,8 +478,8 @@ const TOUR_GROUPS = [
             ]
           },
           {
-            day: 8,
-            title: "Day 8 – Chinguetti & Tanouchert",
+            day: 9,
+            title: "Day 9 – Chinguetti & Tanouchert",
             description: "Arrive in Chinguetti, visit Tanouchert Oasis.",
             stops: [
               { name: "Chinguetti", coords: [20.4580, -12.3667] },
@@ -481,23 +487,16 @@ const TOUR_GROUPS = [
             ]
           },
           {
-            day: 9,
-            title: "Day 9 – Ouadane, Eye of the Sahara & Atar",
-            description: "Visit Ouadane, Eye of the Sahara, Fort Saganne, and return to Atar.",
+            day: 10,
+            title: "Day 10 – Ouadane, Eye of the Sahara & Return",
+            description: "Visit Ouadane, Eye of the Sahara, Fort Saganne, drive through Seguellil back to Nouakchott.",
             stops: [
               { name: "Ouadane", coords: [20.9332, -11.6173] },
               { name: "Eye of the Sahara", coords: [21.1216, -11.4022] },
               { name: "Fort Saganne", coords: [20.5426, -12.8006] },
-              { name: "Atar", coords: [20.5175, -13.0474] }
-            ]
-          },
-          {
-            day: 10,
-            title: "Day 10 – Return to Nouakchott",
-            description: "Drive through Seguellil back to Nouakchott.",
-            stops: [
-              { name: "Seguellil", coords: [20.50, -13.30] },
-              { name: "Nouakchott", coords: [18.0858, -15.9785] }
+              { name: "Atar", coords: [20.5175, -13.0474] },
+              { name: "Seguellil", coords: [20.244868, -13.397906] },
+              { name: "Nouakchott", coords: [18.088513, -15.960831] }
             ]
           }
         ]
