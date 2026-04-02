@@ -64,9 +64,9 @@ function buildSegments(tour) {
     if (!sc.length) return;
 
     let coords;
-    if (day.routeCoords && day.routeCoords.length >= 2) {
-      // Use pre-computed road-following coordinates
-      coords = day.routeCoords;
+    const rc = (typeof ROUTE_COORDS !== 'undefined') && ROUTE_COORDS[tour.id] && ROUTE_COORDS[tour.id][day.day];
+    if (rc && rc.length >= 2) {
+      coords = rc;
     } else {
       // Straight-line fallback
       coords = prevCoord ? [prevCoord, ...sc] : sc;
