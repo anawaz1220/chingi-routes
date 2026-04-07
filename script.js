@@ -250,10 +250,20 @@ function buildHighlightedLayer(tour) {
   const orderedStops = collectUniqueStops(tour);
   const total = orderedStops.length;
 
+  // Check if tour is a circuit (start == end coords)
+  const firstStop = orderedStops[0];
+  const lastStop  = orderedStops[total - 1];
+  const isCircuit = total > 1 &&
+    Math.abs(firstStop.coords[0] - lastStop.coords[0]) < 0.01 &&
+    Math.abs(firstStop.coords[1] - lastStop.coords[1]) < 0.01;
+
   orderedStops.forEach((stop, i) => {
     let marker;
     const isFirst = i === 0;
     const isLast  = i === total - 1;
+
+    // Skip the last stop if it's a circuit (it overlaps with S pin)
+    if (isCircuit && isLast) return;
 
     const tooltipText = `${stop.name} · Day ${stop.day}`;
     const popupHtml = `
@@ -264,10 +274,11 @@ function buildHighlightedLayer(tour) {
       </div>`;
 
     if (isFirst) {
-      marker = L.marker(stop.coords, {
-        icon: createPinIcon('#27ae60', 'S'),
-        zIndexOffset: 1000
-      });
+      // Circuit tours: show S/E combined pin; one-way tours: green S pin
+      const icon = isCircuit
+        ? createPinIcon('#2c3e50', 'S/E')
+        : createPinIcon('#27ae60', 'S');
+      marker = L.marker(stop.coords, { icon, zIndexOffset: 1000 });
     } else if (isLast) {
       marker = L.marker(stop.coords, {
         icon: createPinIcon('#e74c3c', 'E'),

@@ -42,9 +42,10 @@ const TOUR_GROUPS = [
           {
             day: 3,
             title: "Day 3 – Iron Ore Train",
-            description: "Drive to Choum, board the legendary Iron Ore Train to Nouadhibou.",
+            description: "Drive via Atar to Choum, board the legendary Iron Ore Train to Nouadhibou.",
             stops: [
-              { name: "Choum", coords: [21.1947, -13.0528] },
+              { name: "Atar", coords: [20.5200, -13.0508] },
+              { name: "Choum", coords: [21.2975, -13.0668] },
               { name: "Nouadhibou", coords: [20.9310, -17.0347] }
             ]
           },
@@ -79,7 +80,7 @@ const TOUR_GROUPS = [
             title: "Day 2 – Azoueiga Dunes",
             description: "Drive northeast to the spectacular Azoueiga sand dunes.",
             stops: [
-              { name: "Azoueiga Dunes", coords: [20.0000, -13.5000] }
+              { name: "Azoueiga Dunes", coords: [19.8689, -13.5055] }
             ]
           },
           {
@@ -106,10 +107,11 @@ const TOUR_GROUPS = [
           {
             day: 5,
             title: "Day 5 – Ben Amera",
-            description: "Drive via Fort Saganne and Agrour to the monolith Ben Amera and Ben Aicha.",
+            description: "Drive via Fort Saganne, Agrour, and Atar to the monolith Ben Amera and Ben Aicha.",
             stops: [
               { name: "Fort Saganne", coords: [20.5426, -12.8006] },
               { name: "Agrour", coords: [20.5397, -12.7749] },
+              { name: "Atar", coords: [20.5200, -13.0508] },
               { name: "Ben Amera", coords: [21.2292, -13.6594] },
               { name: "Ben Aicha", coords: [21.2400, -13.7500] }
             ]
@@ -120,7 +122,7 @@ const TOUR_GROUPS = [
             description: "Drive to Choum Tunnel and Choum, board the Iron Ore Train to Nouadhibou.",
             stops: [
               { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
-              { name: "Choum", coords: [21.1947, -13.0528] },
+              { name: "Choum", coords: [21.2975, -13.0668] },
               { name: "Nouadhibou", coords: [20.9310, -17.0347] }
             ]
           },
@@ -163,27 +165,27 @@ const TOUR_GROUPS = [
             title: "Day 3 – Azoueiga Dunes",
             description: "Journey east to the magnificent Azoueiga sand dunes.",
             stops: [
-              { name: "Azoueiga Dunes", coords: [20.0000, -13.5000] }
+              { name: "Azoueiga Dunes", coords: [19.8665, -13.5485] }
             ]
           },
           {
             day: 4,
             title: "Day 4 – Terjit & Atar",
-            description: "Visit Terjit Oasis then overnight in the historic town of Atar.",
+            description: "Visit Terjit Oasis, Mhaireth Oasis, then overnight in the historic town of Atar.",
             stops: [
               { name: "Terjit Oasis", coords: [20.2500, -13.1000] },
-              { name: "Atar", coords: [20.5175, -13.0474] }
+              { name: "Mhaireth Oasis", coords: [20.2779, -13.0023] },
+              { name: "Atar", coords: [20.5200, -13.0508] }
             ]
           },
           {
             day: 5,
             title: "Day 5 – Desert Crossing",
-            description: "Cross via Jraif, Sebkha Chemchane salt flat, El Beyyed, and Rak.",
+            description: "Cross via Jraif, Sebkha Chemchane salt flat, and El Beyyed.",
             stops: [
-              { name: "Jraif", coords: [20.30, -12.50] },
-              { name: "Sebkha Chemchane", coords: [20.60, -13.10] },
-              { name: "El Beyyed", coords: [20.80, -12.50] },
-              { name: "Rak (Errag)", coords: [20.30, -12.70] }
+              { name: "Jraif", coords: [20.8519, -12.4510] },
+              { name: "Sebkha Chemchane", coords: [21.0658, -12.1828] },
+              { name: "El Beyyed", coords: [21.5296, -11.3383] }
             ]
           },
           {
@@ -224,12 +226,11 @@ const TOUR_GROUPS = [
           },
           {
             day: 10,
-            title: "Day 10 – Fort Saganne & Mhaireth",
-            description: "Visit Fort Saganne, Agrour ruins, and Mhaireth Oasis.",
+            title: "Day 10 – Fort Saganne & Agrour",
+            description: "Visit Fort Saganne and Agrour ruins.",
             stops: [
               { name: "Fort Saganne", coords: [20.5426, -12.8006] },
-              { name: "Agrour", coords: [20.5397, -12.7749] },
-              { name: "Mhaireth Oasis", coords: [20.2772, -13.0041] }
+              { name: "Agrour", coords: [20.5397, -12.7749] }
             ]
           },
           {
@@ -246,7 +247,7 @@ const TOUR_GROUPS = [
             description: "Drive to Choum Tunnel and Choum, begin the legendary Iron Ore Train journey.",
             stops: [
               { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
-              { name: "Choum", coords: [21.1947, -13.0528] },
+              { name: "Choum", coords: [21.2975, -13.0668] },
               { name: "Nouadhibou", coords: [20.9310, -17.0347] }
             ]
           },
@@ -289,7 +290,7 @@ const TOUR_GROUPS = [
             title: "Day 3 – Diawling National Park",
             description: "Journey south to Diawling National Park near the Senegal River delta.",
             stops: [
-              { name: "Diawling National Park", coords: [16.35, -16.25] }
+              { name: "Diawling National Park", coords: [16.5134, -16.2903] }
             ]
           },
           {
@@ -306,9 +307,9 @@ const TOUR_GROUPS = [
             description: "Explore Aleg, Kamour, Kiffa, and the Guelta Metraucha water source.",
             stops: [
               { name: "Aleg", coords: [17.0578, -13.9218] },
-              { name: "Kamour", coords: [17.00, -13.00] },
+              { name: "Kamour", coords: [17.0739, -12.0370] },
               { name: "Kiffa", coords: [16.6227, -11.4046] },
-              { name: "Guelta Metraucha", coords: [17.50, -11.80] }
+              { name: "Guelta Metraucha", coords: [16.5352, -10.7873] }
             ]
           },
           {
@@ -384,10 +385,11 @@ const TOUR_GROUPS = [
           {
             day: 14,
             title: "Day 14 – Iron Ore Train",
-            description: "Drive to Choum Tunnel, board the Iron Ore Train to Nouadhibou.",
+            description: "Drive via Atar to Choum Tunnel, board the Iron Ore Train to Nouadhibou.",
             stops: [
+              { name: "Atar", coords: [20.5200, -13.0508] },
               { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
-              { name: "Choum", coords: [21.1947, -13.0528] },
+              { name: "Choum", coords: [21.2977, -13.0651] },
               { name: "Nouadhibou", coords: [20.9310, -17.0347] }
             ]
           },
