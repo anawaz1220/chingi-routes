@@ -144,6 +144,29 @@ function createPinIcon(color, label) {
   });
 }
 
+// ── Helper: circuit S/E pin (green S leaning left, red E leaning right) ──
+
+function createCircuitPinIcon() {
+  const pin = (color, label) =>
+    `<svg width="24" height="32" viewBox="0 0 24 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 1C6.48 1 2 5.48 2 11c0 7.59 10 20 10 20s10-12.41 10-20C22 5.48 17.52 1 12 1z"
+            fill="${color}" stroke="#fff" stroke-width="1.5"/>
+      <text x="12" y="12.5" text-anchor="middle" dominant-baseline="middle"
+            fill="#fff" font-size="10" font-weight="800"
+            font-family="-apple-system,BlinkMacSystemFont,sans-serif">${label}</text>
+    </svg>`;
+  return L.divIcon({
+    className: '',
+    html: `<div style="position:relative;width:64px;height:50px;">
+      <div style="position:absolute;left:50%;margin-left:-12px;bottom:0;transform-origin:50% 100%;transform:rotate(-45deg);">${pin('#27ae60', 'S')}</div>
+      <div style="position:absolute;left:50%;margin-left:-12px;bottom:0;transform-origin:50% 100%;transform:rotate(45deg);">${pin('#e74c3c', 'E')}</div>
+    </div>`,
+    iconSize: [64, 50],
+    iconAnchor: [32, 50],
+    tooltipAnchor: [0, -30]
+  });
+}
+
 // ── Normal layer (all-tours view) ─────────────────────────────────────────
 // Thin lines (weight 2), small dots (radius 5), no numbers/arrows
 
@@ -250,20 +273,18 @@ function buildHighlightedLayer(tour) {
   const orderedStops = collectUniqueStops(tour);
   const total = orderedStops.length;
 
-  // Check if tour is a circuit (start == end coords)
-  const firstStop = orderedStops[0];
-  const lastStop  = orderedStops[total - 1];
-  const isCircuit = total > 1 &&
-    Math.abs(firstStop.coords[0] - lastStop.coords[0]) < 0.01 &&
-    Math.abs(firstStop.coords[1] - lastStop.coords[1]) < 0.01;
+  // Detect circuit from raw tour data (before deduplication removes the return stop)
+  const rawFirst = tour.days[0] && tour.days[0].stops[0];
+  const rawLastDay = tour.days[tour.days.length - 1];
+  const rawLast = rawLastDay && rawLastDay.stops[rawLastDay.stops.length - 1];
+  const isCircuit = !!(rawFirst && rawLast &&
+    Math.abs(rawFirst.coords[0] - rawLast.coords[0]) < 0.01 &&
+    Math.abs(rawFirst.coords[1] - rawLast.coords[1]) < 0.01);
 
   orderedStops.forEach((stop, i) => {
     let marker;
     const isFirst = i === 0;
     const isLast  = i === total - 1;
-
-    // Skip the last stop if it's a circuit (it overlaps with S pin)
-    if (isCircuit && isLast) return;
 
     const tooltipText = `${stop.name} · Day ${stop.day}`;
     const popupHtml = `
@@ -274,12 +295,12 @@ function buildHighlightedLayer(tour) {
       </div>`;
 
     if (isFirst) {
-      // Circuit tours: show S/E combined pin; one-way tours: green S pin
+      // Circuit tours: two-pin S/E icon; one-way tours: green S pin
       const icon = isCircuit
-        ? createPinIcon('#2c3e50', 'S/E')
+        ? createCircuitPinIcon()
         : createPinIcon('#27ae60', 'S');
       marker = L.marker(stop.coords, { icon, zIndexOffset: 1000 });
-    } else if (isLast) {
+    } else if (isLast && !isCircuit) {
       marker = L.marker(stop.coords, {
         icon: createPinIcon('#e74c3c', 'E'),
         zIndexOffset: 1000

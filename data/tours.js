@@ -113,7 +113,7 @@ const TOUR_GROUPS = [
               { name: "Agrour", coords: [20.5397, -12.7749] },
               { name: "Atar", coords: [20.5200, -13.0508] },
               { name: "Ben Amera", coords: [21.2292, -13.6594] },
-              { name: "Ben Aicha", coords: [21.2400, -13.7500] }
+              { name: "Ben Aicha", coords: [21.2940, -13.6957] }
             ]
           },
           {
@@ -157,7 +157,7 @@ const TOUR_GROUPS = [
             title: "Day 2 – Banc d'Arguin",
             description: "Drive north along the Atlantic coast to Banc d'Arguin National Park.",
             stops: [
-              { name: "Banc d'Arguin National Park", coords: [20.4998, -16.3019] }
+              { name: "Banc d'Arguin National Park", coords: [19.8993, -16.2980] }
             ]
           },
           {
@@ -193,9 +193,9 @@ const TOUR_GROUPS = [
             title: "Day 6 – Northern Adrar",
             description: "Explore Bir Ziri, El Ghallaouiya, and the ancient caravan route Trig Sbil.",
             stops: [
-              { name: "Bir Ziri", coords: [21.20, -11.30] },
-              { name: "El Ghallaouiya", coords: [21.50, -11.20] },
-              { name: "Trig Sbil", coords: [21.70, -11.00] }
+              { name: "Bir Ziri", coords: [21.5524, -10.7835] },
+              { name: "El Ghallaouiya", coords: [21.5872, -10.5996] },
+              { name: "Trig Sbil", coords: [21.5406, -10.5855] }
             ]
           },
           {
@@ -221,7 +221,7 @@ const TOUR_GROUPS = [
             title: "Day 9 – Entkemkemt Oasis",
             description: "Explore Chinguetti and discover the hidden Entkemkemt Oasis.",
             stops: [
-              { name: "Entkemkemt Oasis", coords: [20.60, -12.00] }
+              { name: "Entkemkemt Oasis", coords: [20.4890, -12.3275] }
             ]
           },
           {
@@ -282,7 +282,7 @@ const TOUR_GROUPS = [
             title: "Day 2 – Banc d'Arguin",
             description: "Drive north to Banc d'Arguin National Park, a UNESCO World Heritage Site.",
             stops: [
-              { name: "Banc d'Arguin National Park", coords: [20.4998, -16.3019] }
+              { name: "Banc d'Arguin National Park", coords: [19.8843, -16.2954] }
             ]
           },
           {
@@ -317,7 +317,7 @@ const TOUR_GROUPS = [
             title: "Day 6 – Néma",
             description: "Drive east through Ayoun el Atrous to Néma in eastern Mauritania.",
             stops: [
-              { name: "Ayoun el Atrous", coords: [16.6500, -11.4500] },
+              { name: "Ayoun el Atrous", coords: [16.6630, -9.6029] },
               { name: "Néma", coords: [16.6208, -7.2590] }
             ]
           },
@@ -334,7 +334,7 @@ const TOUR_GROUPS = [
             title: "Day 8 – Rock Formations",
             description: "Explore the Elephant Rock and Finger Rock at Es Sba.",
             stops: [
-              { name: "Elephant Rock / Finger Rock (Es Sba)", coords: [17.00, -7.20] }
+              { name: "Elephant Rock / Finger Rock (Es Sba)", coords: [18.4012, -8.5741] }
             ]
           },
           {
@@ -342,7 +342,7 @@ const TOUR_GROUPS = [
             title: "Day 9 – Tichitt",
             description: "Drive west via Akreijit to the cliff town of Tichitt.",
             stops: [
-              { name: "Akreijit", coords: [18.30, -9.80] },
+              { name: "Akreijit", coords: [18.4022, -9.2537] },
               { name: "Tichitt", coords: [18.4531, -9.5167] }
             ]
           },
@@ -359,7 +359,7 @@ const TOUR_GROUPS = [
             title: "Day 11 – Adrar Oases",
             description: "Cross Wadi Timinit then visit Terjit Oasis and Mhaireth Oasis.",
             stops: [
-              { name: "Wadi Timinit", coords: [19.50, -12.00] },
+              { name: "Wadi Timinit", coords: [19.9143, -12.8918] },
               { name: "Terjit Oasis", coords: [20.2500, -13.1000] },
               { name: "Mhaireth Oasis", coords: [20.2772, -13.0041] }
             ]
