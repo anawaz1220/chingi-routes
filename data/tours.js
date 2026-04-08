@@ -42,11 +42,12 @@ const TOUR_GROUPS = [
           {
             day: 3,
             title: "Day 3 – Iron Ore Train",
-            description: "Drive via Atar to Choum, board the legendary Iron Ore Train to Nouadhibou.",
+            description: "Drive via Atar and Choum Tunnel to Choum, board the legendary Iron Ore Train to Nouadhibou.",
             stops: [
               { name: "Atar", coords: [20.5200, -13.0508] },
+              { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
               { name: "Choum", coords: [21.2975, -13.0668] },
-              { name: "Nouadhibou", coords: [20.9310, -17.0347] }
+              { name: "Nouadhibou", coords: [21.0408, -17.0319] }
             ]
           },
           {
@@ -235,10 +236,11 @@ const TOUR_GROUPS = [
           },
           {
             day: 11,
-            title: "Day 11 – Ben Amira",
-            description: "Visit Ben Amira, one of the largest monoliths in the world.",
+            title: "Day 11 – Ben Amira & Ben Aicha",
+            description: "Visit Ben Amira and Ben Aicha, two of the largest monoliths in the world.",
             stops: [
-              { name: "Ben Amira", coords: [21.2292, -13.6594] }
+              { name: "Ben Amira", coords: [21.2292, -13.6594] },
+              { name: "Ben Aicha", coords: [21.2943, -13.6957] }
             ]
           },
           {
@@ -248,7 +250,7 @@ const TOUR_GROUPS = [
             stops: [
               { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
               { name: "Choum", coords: [21.2975, -13.0668] },
-              { name: "Nouadhibou", coords: [20.9310, -17.0347] }
+              { name: "Nouadhibou", coords: [20.9054, -17.0555] }
             ]
           },
           {
@@ -390,7 +392,7 @@ const TOUR_GROUPS = [
               { name: "Atar", coords: [20.5200, -13.0508] },
               { name: "Choum Tunnel", coords: [21.3285, -13.0019] },
               { name: "Choum", coords: [21.2977, -13.0651] },
-              { name: "Nouadhibou", coords: [20.9310, -17.0347] }
+              { name: "Nouadhibou", coords: [20.9834, -17.0322] }
             ]
           },
           {
