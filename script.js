@@ -34,17 +34,24 @@ let activeTourId  = null;
 
 function collectUniqueStops(tour) {
   const stops = [];
-  const seen  = new Set();
+  const seen  = new Map(); // coords key → index in stops array
   tour.days.forEach(day => {
     day.stops.forEach(stop => {
       const key = stop.coords.join(',');
-      if (!seen.has(key)) {
-        seen.add(key);
+      if (seen.has(key)) {
+        // Same location on multiple days — merge day numbers and titles
+        const existing = stops[seen.get(key)];
+        if (!Array.isArray(existing.day)) existing.day = [existing.day];
+        existing.day.push(day.day);
+        if (!Array.isArray(existing.dayTitle)) existing.dayTitle = [existing.dayTitle];
+        existing.dayTitle.push(day.title);
+      } else {
+        seen.set(key, stops.length);
         stops.push({
           name: stop.name,
           coords: stop.coords,
           seq: stops.length + 1,
-          day: day.day,         // day number (1, 2, 3…)
+          day: day.day,         // day number (1, 2, 3…) or array when multi-day
           dayTitle: day.title   // e.g. "Day 2 – Desert & Oasis"
         });
       }
@@ -96,7 +103,21 @@ function buildSegments(tour) {
       coords = prevCoord ? [prevCoord, ...sc] : sc;
     }
 
-    if (coords.length >= 2) segments.push({ coords, day });
+    // Detect same-location day (rest day): all stops are at previous day's endpoint
+    const isSameLoc = prevCoord && sc.every(c =>
+      Math.abs(c[0] - prevCoord[0]) < 0.001 && Math.abs(c[1] - prevCoord[1]) < 0.001
+    );
+
+    if (coords.length >= 2) {
+      if (isSameLoc && segments.length > 0) {
+        // Rest/same-location day — merge into previous segment's popup, don't draw separate line
+        const prev = segments[segments.length - 1];
+        if (!prev.extraDays) prev.extraDays = [];
+        prev.extraDays.push(day);
+      } else {
+        segments.push({ coords, day });
+      }
+    }
     prevCoord = sc[sc.length - 1];
   });
   return segments;
@@ -176,7 +197,11 @@ function buildNormalLayer(tour) {
   const seen    = new Set();
   const segments = buildSegments(tour);
 
-  segments.forEach(({ coords, day }) => {
+  segments.forEach(({ coords, day, extraDays }) => {
+    const allDays  = extraDays ? [day, ...extraDays] : [day];
+    const titleHtml = allDays.map(d => `<div class="popup-day-title">${d.title}</div>`).join('');
+    const descHtml  = allDays.map(d => `<div class="popup-description">${d.description}</div>`).join('');
+
     // Shadow
     L.polyline(coords, {
       color: '#000', weight: 4, opacity: 0.1,
@@ -190,8 +215,7 @@ function buildNormalLayer(tour) {
     }).bindPopup(`
       <div class="popup-inner">
         <span class="popup-tour-badge" style="background:${tour.color}">${tour.name}</span>
-        <div class="popup-day-title">${day.title}</div>
-        <div class="popup-description">${day.description}</div>
+        ${titleHtml}${descHtml}
       </div>`, { maxWidth: 260 }
     ).addTo(lg);
   });
@@ -225,7 +249,11 @@ function buildHighlightedLayer(tour) {
   const allC     = [];
   const segments = buildSegments(tour);
 
-  segments.forEach(({ coords, day }) => {
+  segments.forEach(({ coords, day, extraDays }) => {
+    const allDays   = extraDays ? [day, ...extraDays] : [day];
+    const titleHtml = allDays.map(d => `<div class="popup-day-title">${d.title}</div>`).join('');
+    const descHtml  = allDays.map(d => `<div class="popup-description">${d.description}</div>`).join('');
+
     // Shadow
     L.polyline(coords, {
       color: '#000', weight: 8, opacity: 0.13,
@@ -240,8 +268,7 @@ function buildHighlightedLayer(tour) {
     pl.bindPopup(`
       <div class="popup-inner">
         <span class="popup-tour-badge" style="background:${tour.color}">${tour.name}</span>
-        <div class="popup-day-title">${day.title}</div>
-        <div class="popup-description">${day.description}</div>
+        ${titleHtml}${descHtml}
       </div>`, { maxWidth: 260 }
     );
     pl.addTo(lg);
@@ -286,11 +313,15 @@ function buildHighlightedLayer(tour) {
     const isFirst = i === 0;
     const isLast  = i === total - 1;
 
-    const tooltipText = `${stop.name} · Day ${stop.day}`;
+    const dayLabel = Array.isArray(stop.day) ? stop.day.join(' & ') : stop.day;
+    const tooltipText = `${stop.name} · Day ${dayLabel}`;
+    const dayTitleHtml = Array.isArray(stop.dayTitle)
+      ? stop.dayTitle.map(t => `<div class="popup-day-title">${t}</div>`).join('')
+      : `<div class="popup-day-title">${stop.dayTitle}</div>`;
     const popupHtml = `
       <div class="popup-inner">
         <span class="popup-tour-badge" style="background:${tour.color}">${tour.name}</span>
-        <div class="popup-day-title">${stop.dayTitle}</div>
+        ${dayTitleHtml}
         <div class="popup-description">${stop.name}</div>
       </div>`;
 
@@ -544,3 +575,12 @@ function init() {
 }
 
 init();
+
+// ── Dev credit – copy email ───────────────────────────────────────────────
+document.getElementById('copy-email-btn').addEventListener('click', () => {
+  navigator.clipboard.writeText('asifnawaz1220@gmail.com').then(() => {
+    const toast = document.getElementById('email-toast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+});
