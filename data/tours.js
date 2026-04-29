@@ -267,7 +267,7 @@ const TOUR_GROUPS = [
       // ─── Tour 4 ───────────────────────────────────────────────────────────
       {
         id: "adrar-tagant-aoukar",
-        name: "Adrar Tagant Aoukar Tour",
+        name: "Adrar Oualata Tour",
         duration: "15 Days",
         color: "#e67e22",
         days: [
@@ -525,7 +525,7 @@ const TOUR_GROUPS = [
       // ─── Tour 1 ───────────────────────────────────────────────────────────
       {
         id: "boat-tour",
-        name: "Senegal River Boat Tour",
+        name: "Senegal River Boat Adventure",
         duration: "7 Days",
         color: "#1abc9c",
         days: [
@@ -668,7 +668,7 @@ const TOUR_GROUPS = [
       // ─── Tour 3 ───────────────────────────────────────────────────────────
       {
         id: "dindefelo-tour",
-        name: "Dindefelo Tour",
+        name: "Senegambia Southern Tour",
         duration: "12 Days",
         color: "#9b59b6",
         days: [
@@ -691,11 +691,11 @@ const TOUR_GROUPS = [
           },
           {
             day: 3,
-            title: "Day 3 – Kaolack & Niokolo-Koba",
-            description: "Drive through Kaolack and enter the vast Niokolo-Koba National Park.",
+            title: "Day 3 – Kaolack & Tambacounda",
+            description: "Drive through Kaolack and continue to Tambacounda.",
             stops: [
               { name: "Kaolack", coords: [14.1391, -16.0716] },
-              { name: "Niokolo-Koba National Park", coords: [13.7782, -13.6553] }
+              { name: "Tambacounda", coords: [13.7782, -13.6553] }
             ]
           },
           {
